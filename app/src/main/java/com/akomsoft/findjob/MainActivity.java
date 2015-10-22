@@ -1,5 +1,6 @@
 package com.akomsoft.findjob;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logInClickHandler(View view) {
+        Intent LoginIntent = new Intent(this,LoginActivity.class);
+        startActivity(LoginIntent);
     }
 
     public void singUpClickHandler(View view) {
