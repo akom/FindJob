@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logInClickHandler(View view) {
-        Intent LoginIntent = new Intent(this,LogInActivity.class);
+        Intent LoginIntent = new Intent(this,LoginActivity.class);
         startActivity(LoginIntent);
     }
 

@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LogInActivity"
+            android:name=".LoginActivity"
             android:label="@string/log_in"
             android:parentActivityName=".MainActivity" >
         </activity>
