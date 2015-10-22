@@ -18,11 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LogInActivity"
             android:label="@string/log_in"
-            android:parentActivityName=".MainActivity"
-
-            >
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity android:name=".SignUpActivity"
+            android:label="@string/sign_up"
+            android:parentActivityName=".MainActivity" >>
         </activity>
     </application>
 

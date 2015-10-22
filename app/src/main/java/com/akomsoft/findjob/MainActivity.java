@@ -14,10 +14,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logInClickHandler(View view) {
-        Intent LoginIntent = new Intent(this,LoginActivity.class);
+        Intent LoginIntent = new Intent(this,LogInActivity.class);
         startActivity(LoginIntent);
     }
 
     public void singUpClickHandler(View view) {
+        Intent SignUpIntent = new Intent(this,SignUpActivity.class);
+        startActivity(SignUpIntent);
     }
 }
