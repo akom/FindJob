@@ -8,7 +8,7 @@
     android:paddingRight="10dp" >
 
     <TextView
-        android:id="@+id/id"
+        android:id="@+id/texViewId"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
@@ -16,19 +16,19 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/textViewTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textStyle="bold"/>
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/textViewLocation"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textStyle="bold"/>
     <TextView
-        android:id="@+id/company"
+        android:id="@+id/textViewCompany"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="left"
