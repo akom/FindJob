@@ -12,9 +12,9 @@ public class ParseJSON {
 
     public static final String JSON_ARRAY = "result";
     public static final String KEY_ID = "id";
-    public static final String KEY_TITTLE = "tittles";
-    public static final String KEY_LOCATION = "locations";
-    public static final String KEY_COMPANY = "companies";
+    public static final String KEY_TITTLE = "tittle";
+    public static final String KEY_LOCATION = "location";
+    public static final String KEY_COMPANY = "company";
 
     private JSONArray jobs = null;
 

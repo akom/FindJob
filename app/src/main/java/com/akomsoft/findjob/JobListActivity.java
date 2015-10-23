@@ -2,6 +2,7 @@ package com.akomsoft.findjob;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -24,7 +25,7 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
 
     private Button buttonGet;
 
-    private ListView listView;
+    private ListView listViewJobs;
 
 
     @Override
@@ -33,16 +34,19 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_job_list);
         buttonGet = (Button) findViewById(R.id.buttonGet);
         buttonGet.setOnClickListener(this);
-        listView = (ListView) findViewById(R.id.listView);
+        listViewJobs = (ListView) findViewById(R.id.listViewJobs);
 
     }
     private void sendRequest(){
-
+        Log.i("click","entrou");
         StringRequest stringRequest = new StringRequest(JSON_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
                         showJSON(response);
+                        Log.i("click", response);
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -52,6 +56,8 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
                     }
                 });
 
+
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
@@ -60,12 +66,13 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
         ParseJSON pj = new ParseJSON(json);
         pj.parseJSON();
         CustomList cl = new CustomList(this, ParseJSON.ids,ParseJSON.tittles,ParseJSON.locations,ParseJSON.companies);
-        listView.setAdapter(cl);
+        listViewJobs.setAdapter(cl);
     }
 
     @Override
     public void onClick(View v) {
         sendRequest();
+        Log.i("click","click");
     }
 
 }
