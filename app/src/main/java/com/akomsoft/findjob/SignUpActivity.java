@@ -25,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     public static final String KEY_NAME = "name";
     public static final String KEY_LASTNAME = "lastName";
     public static final String KEY_EMAIL = "email";
-    public static final String KEY_PASSWORD = "pasword";
+    public static final String KEY_PASSWORD = "password";
 
     private EditText editTextName;
     private EditText ediTextLasName;
@@ -76,8 +76,8 @@ public class SignUpActivity extends AppCompatActivity {
                 Map<String,String> params = new HashMap<>();
                 params.put(KEY_NAME,name);
                 params.put(KEY_LASTNAME,lastName);
-                params.put(KEY_PASSWORD,password);
                 params.put(KEY_EMAIL, email);
+                params.put(KEY_PASSWORD,password);
                 return params;
             }
 
