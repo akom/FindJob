@@ -13,7 +13,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void logInClickHandler(View view) {
-
+    public void JobListClickHandler(View view) {
+        Intent JobListIntent = new Intent(this,JobListActivity.class);
+        startActivity(JobListIntent);
     }
 }
