@@ -11,6 +11,13 @@
     tools:context=".JobListActivity"
     android:weightSum="1">
 
+    <Button
+        android:id="@+id/buttonGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Procurar Mais Vagas"
+        android:layout_marginBottom="10dp"/>
+
     <ListView
         android:id="@+id/listViewJobs"
         android:layout_width="match_parent"
@@ -18,11 +25,7 @@
         android:layout_weight="2.19" />
 
 
-    <Button
-        android:id="@+id/buttonGet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Procurar Mais Vagas" />
+
 
 
 </LinearLayout>
