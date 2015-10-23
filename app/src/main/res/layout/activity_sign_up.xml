@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:id="@+id/et_email"
+        android:id="@+id/et_new_email"
         android:layout_below="@+id/tv_email"
         />
 
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="@string/new_password"
         android:id="@+id/tv_new_password"
-        android:layout_below="@id/et_email"
+        android:layout_below="@id/et_new_email"
         android:inputType="textEmailAddress"
         />
 
