@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.akomsoft.findjob.JobActivity">
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Gerente de Tecnologia da Informação (TI)"/>
+
+    <TextView
+    android:id="@+id/Company"
+    android:layout_below="@id/tittle"
+    android:layout_marginTop="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="15sp"
+    android:text="Bunge"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_below="@id/Company"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:text="São Paulo / SP / BR"/>
+
+    <TextView
+        android:layout_below="@id/location"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objetivo do Cargo:
+
+Responsável pelos sistemas e aplicações para as áreas funcionais, tais como TAX, Controladoria, Compras, Finanças, Funcionalidades Administrativas como Centro de Serviços Compartilhados. Principais responsabilidades incluem sincronização de estratégia e definição de IS roadmaps/entrega de projetos e programas.
+
+Principais atividades:
+
+- Liderar a implantação do Template SAP propiciando as melhores práticas em serviços de governança de TI;
+- Habilitar a execução de novos lançamentos SAP;
+- Dar suporte aos gestores dos Processos de Negócios” no desenvolvimento de business cases e investimentos necessários requeridos, incluindo benefícios e custos para qualquer novo projeto / solução de negócio;
+- Alinhar com as equipes especialistas em processos de negócio os KPI’s, roteiros, portfólio e projetos;
+- Programar o plano de implementação e priorização dentro da função;
+- Coordenar a entrega das equipes de sistemas e aplicações dos clientes, incluindo parceiros internos e externos;
+- Apoio contínuo, manutenção e otimização das soluções entregues;
+- Gestão da mudança, comunicação e treinamento de clientes para garantir realização de valor de negócios;
+- Gerenciar equipes de gerentes de projetos, coordenadores seniores, fornecedores e parceiros externos, para apoiar, manter e melhorar a entrega;
+- Manter um relacionamento forte e alinhamento com os líderes de TI das unidades (especialistas em processos de negócio), líderes de áreas funcionais e fornecedores / parceiros de TI externos;
+
+
+Formação:
+
+- Ciência da Computação, Sistemas de Informação ou Engenharia.
+
+Experiência/Conhecimentos Necessários:
+
+Conhecimento em processos financeiros, legislação fiscal Brasileira, controladoria, contabilidade, contas a pagar e receber;
+Experiência anterior em liderança de projetos de TI nessas áreas;
+Experiência em implementação e manutenção (SAP) ERP;
+Experiência anterior em liderança de projetos de TI em ambiente Multicultural;
+Profundo conhecimento da solução SAP: especialmente em FI / CO e MM;
+Profundo conhecimento em soluções de TI, TAX, como Mastersaf;
+Conhecimento em gerenciamento de dados mestres;
+Proficiência em Inglês é exigido / espanhol desejável;
+Disponibilidade para viagens
+- See more at: http://www.vagas.com.br/vagas/v1250455/gerente-de-tecnologia-da-informacao-ti?fnt=21#sthash.pTRmi53J.dpuf"
+
+        />
+
+</RelativeLayout>

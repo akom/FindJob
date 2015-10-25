@@ -14,10 +14,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class JobListActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,6 +32,8 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
         buttonGet.setOnClickListener(this);
         listViewJobs = (ListView) findViewById(R.id.listViewJobs);
 
+        sendRequest();
+
     }
     private void sendRequest(){
         Log.i("click","entrou");
@@ -43,6 +41,7 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
 
                         showJSON(response);
                         Log.i("click", response);
@@ -63,8 +62,15 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void showJSON(String json){
+//        try {
+//            json = URLEncoder.encode(json, "UTF8");
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
+
         ParseJSON pj = new ParseJSON(json);
         pj.parseJSON();
+
         CustomList cl = new CustomList(this, ParseJSON.ids,ParseJSON.tittles,ParseJSON.locations,ParseJSON.companies);
         listViewJobs.setAdapter(cl);
     }
