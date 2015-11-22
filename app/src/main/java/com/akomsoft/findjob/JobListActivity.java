@@ -1,9 +1,11 @@
 package com.akomsoft.findjob;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 public class JobListActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String JSON_URL = "http://akomsoft.com/WebServer/getData.php";
+    public static final String JOB_ID = "id";
 
     private Button buttonGet;
 
@@ -36,7 +39,7 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
 
     }
     private void sendRequest(){
-        Log.i("click","entrou");
+        Log.i("click", "entrou");
         StringRequest stringRequest = new StringRequest(JSON_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -73,6 +76,23 @@ public class JobListActivity extends AppCompatActivity implements View.OnClickLi
 
         CustomList cl = new CustomList(this, ParseJSON.ids,ParseJSON.tittles,ParseJSON.locations,ParseJSON.companies);
         listViewJobs.setAdapter(cl);
+        listViewJobs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                displayJob(position+1);
+
+
+
+            }
+        });
+    }
+
+    private void displayJob(int position) {
+
+        Intent jobIntent = new Intent(this, JobActivity.class);
+        jobIntent.putExtra(JOB_ID, position);
+        startActivity(jobIntent);
+
     }
 
     @Override

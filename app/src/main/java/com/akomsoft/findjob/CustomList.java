@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class CustomList extends ArrayAdapter<String> {
-//    private String[] ids;
+    private String[] ids;
     private String[] tittles;
     private String[] locations;
     private String[] companies;
@@ -18,7 +18,7 @@ public class CustomList extends ArrayAdapter<String> {
                       String[] locations, String[] companies) {
         super(context, R.layout.list_job, ids);
         this.context = context;
-//        this.ids = ids;
+        this.setIds(ids);
         this.tittles = tittles;
         this.locations = locations;
         this.companies = companies;
@@ -39,5 +39,14 @@ public class CustomList extends ArrayAdapter<String> {
         textViewCompany.setText(companies[position]);
 
         return listViewItem;
+    }
+
+
+    public String[] getIds() {
+        return ids;
+    }
+
+    public void setIds(String[] ids) {
+        this.ids = ids;
     }
 }
